@@ -56,14 +56,40 @@ html, body{
     z-index: -1;
 }
 
-textarea {
+@keyframes typewriter {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+@keyframes blink {
+    from {
+        border-color: black;
+    }
+    to {
+        border-color: transparent;
+    }
+}
+
+#chat-box {
     display: block;
+    background-color: #fff;
     width: clamp(100px, 75%, 400px);
     height: clamp(100px, 250px, 300px);
-    font-family: system-ui;
-    font-size: 20px;
     text-align: center;
     opacity: 1;
+    overflow-y: scroll;
+}
+
+.chat-text {
+    font-family: system-ui;
+    font-size: 20px;
+    /* white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 2s steps(13) alternate, blink 800ms steps(13) infinite normal; */
+    /* border-right: 5px solid black; */
 }
 
 .recordbtn {

@@ -2,14 +2,23 @@ import ffmpeg
 import os
 from fastapi import FastAPI, File, UploadFile
 import speech_recognition as sr
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Replace '*' with specific origins if needed
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 @app.post("/api/speech-to-text")
 async def speech_to_text(file: UploadFile):
-    # Save the uploaded WebM file
-    input_path = "temp_audio.webm"
-    output_path = "temp_audio.wav"
+    input_path = "tmp/temp_audio.webm"
+    output_path = "tmp/temp_audio.wav"
     with open(input_path, "wb") as f:
         f.write(await file.read())
     
