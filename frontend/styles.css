@@ -86,6 +86,9 @@ html, body{
 .chat-text {
     font-family: system-ui;
     font-size: 20px;
+    border: 1px solid black;
+    box-shadow: #000;
+    margin: 0;
     /* white-space: nowrap;
     overflow: hidden;
     animation: typewriter 2s steps(13) alternate, blink 800ms steps(13) infinite normal; */
