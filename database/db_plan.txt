@@ -1,0 +1,17 @@
+#: int
+
+Name: string
+
+Typings: ['typing1','typing2'/None]
+
+Stats: {Hp: int, Atk: int, Def: int, ... , Total: int}
+
+Abilities: {Ability1: 'ability1', Ability2: 'ability2'/None, HiddenAbility: 'hiddenability'/None}
+
+Evolution_condition: {level: in/ elemental_stones: stone/ trading: yes/ friendship: yes/ otherCondition: what/ No_evolution: yes}
+
+Rarity: 'Legendary'/'Pseudo-Legendary'/'Paradox'/'Ultra Beast'/'Mythical'/'Normal'
+
+#Form: 'Mega'/'Alolan'/'Galarian'/'Hisuian'/'Others...' #CANCELLED as for now
+
+Region: [('Kanto',1)...]
