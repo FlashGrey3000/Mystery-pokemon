@@ -1,0 +1,23 @@
+{
+    "intents": [
+        {
+            "intent": "question",
+            "text": [
+                "is it",
+                "does it",
+                "can it",
+                "could it",
+                "does that",
+                "can that"
+            ],
+            "responses": [
+                "yes, it can ",
+                "no, it can not ",
+                "I am not sure"
+            ],
+            "query": [
+                "FROM poketable SELECT 1 WHERE match(%%TRAIT%%) is %%%TRAIT%%"
+            ]
+        }
+    ]
+}
