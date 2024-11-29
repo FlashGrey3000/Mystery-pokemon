@@ -120,3 +120,49 @@ html, body{
 .logo {
     margin-left: 15px;
 }
+
+.guess-box {
+    margin-top: 20px;
+}
+
+#autocomplete {
+    width: 300px;
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+}
+
+#suggestions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 316px;
+    background: white;
+    position: absolute;
+}
+
+#suggestions li {
+    padding: 8px;
+    cursor: pointer;
+}
+
+#suggestions li:hover {
+    background: #127ecb;
+    color: #fff;
+}
+
+.guessButton {
+    font-size: 14px;
+    padding: 8px;
+    background-color: #127ecb;
+    border: none;
+    color: #fff;
+    font-family: "arial";
+    font-weight: 600;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.guessButton:hover {
+    background-color: #116099;
+    box-shadow: 2px 2px black;
+}
