@@ -2,7 +2,7 @@
     "intents": [
         {
             "intent": "question",
-            "text": [
+            "patterns": [
                 "is it",
                 "does it",
                 "can it",
@@ -16,7 +16,49 @@
                 "I am not sure"
             ],
             "query": [
-                "FROM poketable SELECT 1 WHERE match(%%TRAIT%%) is %%%TRAIT%%"
+                "FROM PLACEHOLDERQUERY SELECT 1 WHERE match(%%TRAIT%%) is %%%TRAIT%% AND PLACEHOLDERQUERY"
+            ]
+        },
+        {
+            "intent": "greeting",
+            "patterns": [
+                "Hi",
+                "Hello",
+                "Hi, How are you?",
+                "Good Morning",
+                "Good Afternoon",
+                "Good Evening",
+                "Good Day",
+                "Hey there",
+                "Yo",
+                "wassup",
+                "sup",
+                "Heya",
+                "Hola",
+                "Ola",
+                "Ohayo",
+                "Konichiwa",
+                "Namaste"
+            ],
+            "responses": [
+                "Hello, Let's start the game?",
+                "Hey there!, Let's start playing!",
+                "Oh keep the formalities aside, Let's play a round!"
+            ]
+        },
+        {
+            "intent": "noinput",
+            "patterns": [
+                ""
+            ],
+            "responses": [
+                "Sorry, Couldn't hear you?",
+                "I didn't quite get that...",
+                "Pardon?...",
+                "There's some issue with my ears. Can you repeat once more?",
+                "An exploud damaged my hearing system last night. I couldn't hear you properly...",
+                "Sorry, I was distracted by a gardevoir nearby. Can you come again?",
+                "Hmm? What was that?"
             ]
         }
     ]
