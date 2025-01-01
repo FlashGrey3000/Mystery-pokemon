@@ -103,6 +103,7 @@ html, body{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: none;
     margin: 50px;
     opacity: 1;
 }

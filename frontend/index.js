@@ -27,7 +27,7 @@ navigator.mediaDevices.getUserMedia({ audio: true }).then((stream) => {
         const formData = new FormData();
         formData.append('uploadFile', audioBlob, 'audio.webm');
         try {
-            fetch('http://localhost:8000/api/stt', {
+            fetch('http://localhost:8080/api/stt', {
                 method: 'POST',
                 body: formData
             })
@@ -64,8 +64,8 @@ input.addEventListener('input', () => {
             const li = document.createElement('li');
             li.textContent = option;
             li.addEventListener('click', () => {
-                input.value = option; // Set input value to selected suggestion
-                suggestions.innerHTML = ''; // Clear suggestions
+                input.value = option;
+                suggestions.innerHTML = '';
             });
             suggestions.appendChild(li);
         });
